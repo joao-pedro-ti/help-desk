@@ -1,0 +1,28 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Chamados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎫 Sistema de Chamados</h1>
+            <p class="subtitle">Suporte ao Usuário</p>
+        </header>
+
+        <div id="chat" class="chat">
+            <div class="message bot">
+                <p>Bem-vindo ao Sistema de Chamados!</p>
+            </div>
+        </div>
+
+        <div id="controls" class="controls"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

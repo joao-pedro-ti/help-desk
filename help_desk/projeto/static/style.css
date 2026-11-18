@@ -1,0 +1,157 @@
+/* static/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh;
+}
+
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 24px;
+    text-align: center;
+}
+
+header h1 { font-size: 1.6rem; margin-bottom: 4px; }
+.subtitle { opacity: 0.9; font-size: 0.9rem; }
+
+.chat {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #f7f8fc;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-height: 300px;
+    max-height: 500px;
+}
+
+.message {
+    max-width: 85%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    line-height: 1.5;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.message.bot {
+    background: #e8ecff;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.message.user {
+    background: #667eea;
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.message.erro {
+    background: #ffe8e8;
+    color: #c00;
+    border-left: 4px solid #e74c3c;
+}
+
+.message.solucao {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-left: 4px solid #4caf50;
+}
+
+.message p { margin-bottom: 6px; }
+.message p:last-child { margin-bottom: 0; }
+
+.controls {
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.controls button,
+.controls input {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.controls button {
+    background: #667eea;
+    color: #fff;
+    font-weight: 600;
+}
+
+.controls button:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+}
+
+.controls button.secondary {
+    background: #fff;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.controls button.secondary:hover {
+    background: #f0f2ff;
+}
+
+.controls button.option {
+    background: #fff;
+    color: #333;
+    border: 2px solid #ddd;
+    text-align: left;
+    width: 100%;
+}
+
+.controls button.option:hover {
+    border-color: #667eea;
+    background: #f7f8ff;
+}
+
+.controls input {
+    border: 2px solid #ddd;
+    flex: 1;
+    min-width: 150px;
+}
+
+.controls input:focus {
+    outline: none;
+    border-color: #667eea;
+}
