@@ -1,7 +1,7 @@
 // static/script.js
 const chat = document.getElementById('chat');
 const controls = document.getElementById('controls');
-const API = 'http://localhost:5000/api';
+const API = '/api';
 
 let etapaAtual = 'inicio';
 let abrirChamado = false;
